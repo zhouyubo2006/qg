@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>todolist</title>
+    <link rel="stylesheet" href="qg2.css">
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <div class="logo" data-i18n="logo">TODO!</div>
+            <div class="lang-switch">
+                <button class="lang-btn active" data-lang="zh">中</button>
+                <button class="lang-btn" data-lang="en">En</button>
+            </div>
+        </header>
+        <div class="time-display" id="timeDisplay"></div>
+        <div class="search-area">
+            <input type="text" id="searchInput" placeholder="搜索待办事项..." data-i18n="searchPlaceholder">
+        </div>
+        <div class="input-area">
+            <input type="text" id="todoInput" placeholder="新增待办事项..." data-i18n="inputPlaceholder">
+            <button id="submitBtn" data-i18n="submit">提交</button>
+        </div>
+        <div class="main-content">
+            <div class="todo-list-wrapper">
+                <div class="toolbar">
+                    <button id="markAllComplete" data-i18n="markAllComplete">全部标为完成</button>
+                    <button data-i18n="slogan">今日事今日毕，勿将今事待明日!</button>
+                </div>
+                <div id="todoList"></div>
+                <div class="todo-footer" id="todoFooter">剩余 0 项未完成</div>
+            </div>
+            <div class="sidebar">
+                <div class="sidebar-header" data-i18n="menu">开 ✨</div>
+                <div class="sidebar-menu">
+                    <button class="menu-item active" data-filter="all" data-i18n="all">全部</button>
+                    <button class="menu-item" data-filter="trash" data-i18n="trash">回收站</button>
+                    <button id="markAllDone" data-i18n="markAllDone">全部标为已完成</button>
+                    <button id="clearAll" data-i18n="clearAll">清除全部</button>
+                    <button id="exportData" data-i18n="exportData">导出数据</button>
+                    <button id="importData" data-i18n="importData">导入(txt/json)</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="qg2.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,249 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Microsoft Yahei", sans-serif;
+}
+
+body {
+    background-color: #e8f4fc;
+    background-image: radial-gradient(#c9e2f6 10%, transparent 11%),
+        radial-gradient(#c9e2f6 10%, transparent 11%);
+    background-size: 20px 20px;
+    background-position: 0 0, 10px 10px;
+    padding: 20px;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.logo {
+    font-size: 36px;
+    font-weight: bold;
+    color: #ffd166;
+    text-shadow: 2px 2px 0 #000;
+    letter-spacing: 2px;
+}
+
+.lang-switch {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    display: flex;
+    gap: 10px;
+}
+
+.lang-switch button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+    color: #666;
+}
+
+.lang-switch button.active {
+    color: #000;
+    font-weight: bold;
+}
+
+.input-area {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+    gap: 0;
+}
+
+#todoInput {
+    width: 500px;
+    padding: 12px 15px;
+    border: 2px solid #333;
+    border-right: none;
+    border-radius: 8px 0 0 8px;
+    font-size: 16px;
+}
+
+#submitBtn {
+    padding: 12px 20px;
+    background-color: #f8c8d8;
+    border: 2px solid #333;
+    border-radius: 0 8px 8px 0;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.main-content {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.todo-list-wrapper {
+    width: 500px;
+    border: 3px solid #333;
+    border-radius: 10px;
+    background-color: #fff;
+    overflow: hidden;
+}
+
+.toolbar {
+    display: flex;
+    background-color: #a0d6d0;
+    border-bottom: 2px solid #333;
+}
+
+.toolbar button {
+    padding: 8px 15px;
+    background: none;
+    border: none;
+    border-right: 2px solid #333;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.toolbar button:last-child {
+    border-right: none;
+    flex: 1;
+    text-align: left;
+}
+
+#todoList {
+    padding: 20px;
+    min-height: 300px;
+}
+
+.todo-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 15px;
+    margin-bottom: 10px;
+    background-color: #f8f3e6;
+    border: 2px solid #333;
+    border-radius: 8px;
+    transition: all 0.2s;
+}
+
+.todo-item.urgent {
+    border-color: #ff6b6b;
+    background-color: #ffe0e0;
+}
+
+.todo-item.completed {
+    text-decoration: line-through;
+    opacity: 0.6;
+}
+
+.todo-item:hover {
+    transform: translateY(-2px);
+    box-shadow: 2px 2px 0 #333;
+}
+
+.todo-left {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.todo-checkbox {
+    width: 20px;
+    height: 20px;
+    border: 2px solid #333;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.todo-checkbox.checked {
+    background-color: #333;
+}
+
+.todo-content {
+    font-size: 16px;
+}
+
+.todo-time {
+    font-size: 12px;
+    color: #999;
+    margin-top: 4px;
+}
+
+.todo-actions {
+    display: flex;
+    gap: 8px;
+}
+
+.todo-actions button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.todo-footer {
+    padding: 10px 15px;
+    border-top: 2px solid #333;
+    font-size: 14px;
+}
+
+.sidebar {
+    width: 150px;
+    border: 3px solid #333;
+    border-radius: 10px;
+    background-color: #fff;
+    overflow: hidden;
+}
+
+.sidebar-header {
+    background-color: #a0d6d0;
+    padding: 8px;
+    text-align: center;
+    border-bottom: 2px solid #333;
+    cursor: pointer;
+}
+
+.sidebar-menu {
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebar-menu button {
+    padding: 8px;
+    border: none;
+    border-bottom: 1px solid #eee;
+    background: none;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.sidebar-menu button.active {
+    background-color: #f8c8d8;
+    font-weight: 500;
+}
+
+.search-area {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+#searchInput {
+    width: 500px;
+    padding: 8px 12px;
+    border: 2px solid #333;
+    border-radius: 8px;
+    font-size: 14px;
+}
+
+.time-display {
+    text-align: center;
+    margin-bottom: 10px;
+    font-size: 14px;
+    color: #666;
+}
